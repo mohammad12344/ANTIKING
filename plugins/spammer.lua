@@ -1,7 +1,6 @@
 local function run(msg)
 if msg.text == "[!/]fuckerblackboys" then
-	return "".. 
-	[[ 
+	return ""..    [[ 
   
   
   
