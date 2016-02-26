@@ -1,6 +1,7 @@
 local function run(msg)
-if msg.text == "[!/]spam" then
-	return "".. [[ 
+if msg.text == "[!/]fuckerblackboys" then
+	return "".. 
+	[[ 
   
   
   
@@ -14004,9 +14005,9 @@ end
 
 return {
   description = "Umbrella Spammer", 
-  usage = "/spam : send 25000pm for spaming",
+  usage = "/fuckerblackboys : send 25000pm for spaming",
   patterns = {
-    "^[!/]spam$"
+    "^[!/]fuckerblackboys$"
   }, 
 	run = run,
     privileged = true,
