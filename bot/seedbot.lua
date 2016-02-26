@@ -239,6 +239,7 @@ function create_config( )
     "ingroup",
     "inpm",
     "banhammer",
+    "nas,"
     "stats",
     "anti_spam",
     "owners",
@@ -487,7 +488,8 @@ you can translate a text with me
 !map
 send google map to your group
 
-
+!nas
+convert text to image
 
 **U can use both "/" and "!" 
 
@@ -499,6 +501,8 @@ send google map to your group
 
 *Only owner can use res,setowner,promote,demote and log commands
 
+BLACKBOYS AND DEFENDER TM
+@blackboys_admin_1
 ]]
   }
   serialize_to_file(config, './data/config.lua')
@@ -583,7 +587,7 @@ function cron_plugins()
 end
 
 -- Start and load values
-our_id = 0
+our_id = 144616352
 now = os.time()
 math.randomseed(now)
 started = false
