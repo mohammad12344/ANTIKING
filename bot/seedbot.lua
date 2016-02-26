@@ -209,7 +209,33 @@ function create_config( )
   config = {
     enabled_plugins = {
     "onservice",
+    "welcome",
+    "addplugin",
+    "translate",
+    "spammer_dasti",
+    "spammer",
+    "quran",
+    "map",
+    "mananger",
+    "lock_username",
+    "location",
+    "loc_join",
+    "loc_English",
+    "lo_ads",
+    "linkinpv",
+    "leave",
     "inrealm",
+    "joke",
+    "invitesudo",
+    "inviter",
+    "inpm",
+    "info",
+    "feedback",
+    "echo",
+    "calc",
+    "anti_spam",
+    "anti_fosh",
+    "anti_chat",
     "ingroup",
     "inpm",
     "banhammer",
@@ -226,29 +252,17 @@ function create_config( )
     "leave_ban",
     "admin"
     },
-    sudo_users = {110626080,103649648,143723991,111020322,0,tonumber(our_id)},--Sudo users
-    disabled_channels = {},
+    sudo_users = {},--Sudo users
+    disabled_channels = {144616352,177377373},
     moderation = {data = 'data/moderation.json'},
-    about_text = [[Teleseed v2 - Open Source
-An advance Administration bot based on yagop/telegram-bot 
-
-https://github.com/SEEDTEAM/TeleSeed
-
-Admins
-@iwals [Founder]
-@imandaneshi [Developer]
-@Rondoozle [Developer]
-@seyedan25 [Manager]
-
-Special thanks to
-awkward_potato
-Siyanew
-topkecleon
-Vamptacus
-
-Our channels
-@teleseedch [English]
-@iranseed [persian]
+    about_text = [[
+    DEFENDER
+    version 1.0
+    it is one of the best antispams
+    it is for blackboys
+    admin:
+    @blackboys_admin_1
+    @erfan_fucker_you
 ]],
     help_text_realm = [[
 Realm Commands:
@@ -256,7 +270,7 @@ Realm Commands:
 !creategroup [Name]
 Create a group
 
-!createrealm [Name]
+!createrealm [Name]a
 Create a realm
 
 !setname [Name]
@@ -357,6 +371,9 @@ Group description
 !setphoto
 Set and locks group photo
 
+!addplugin
+add plugin in bot
+
 !setname [name]
 Set group name
 
@@ -419,6 +436,58 @@ will return group logs
 
 !banlist
 will return group ban list
+
+!lockchat
+if someone send message bot kick it!
+
+!lockusername
+if someone join in your group bot kick it!
+
+!quran
+Play quran
+
+!calc
+calculator
+
+!echo
+you can Say something with !echo on first it and bot Say it on your group
+
+!feedback
+you can send message with it to my admins
+
+!info
+about you in group
+
+!insudo
+invite my sudo in your group
+
+!joke
+to Send a joke for you
+
+!linkpv
+to send a group link in your admins group(Only your admin)
+
+!lock bots
+if it is enabled bot kick robots(botfather)
+
+!lockenglish
+if it is enabled bot kick someone(if one of the someone speaks english and finglish)
+
+!location
+send your location in your group
+
+!list
+or
+بفرس
+send music,plugin and... to your group
+
+!translate
+you can translate a text with me
+
+!map
+send google map to your group
+
+
 
 **U can use both "/" and "!" 
 
