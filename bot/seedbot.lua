@@ -243,6 +243,9 @@ function create_config( )
     "banhammer",
     "nas",
     "anti_spam",
+    "antibot",
+    "media",
+    "weather",
     "owners",
     "arabic_lock",
     "set",
@@ -346,162 +349,165 @@ This command will send text to [group_id]
 Commands list for a group :
 
 !kick [username|id]
-You can also do it by reply
-
+ کیک کردن فرد مورد نظر با ریپلی یا ایدی
+〰〰〰〰〰〰〰〰〰〰〰〰
 !ban [ username|id]
-You can also do it by reply
-
+اخراج نامحدود(بن)* از گروه با ریپلی
+〰〰〰〰〰〰〰〰〰〰〰〰
 !unban [id]
-You can also do it by reply
-
+در اوردن شخصی از بن
+〰〰〰〰〰〰〰〰〰〰〰〰
 !who
-Members list
-
+درباره ممبر های گروه
+〰〰〰〰〰〰〰〰〰〰〰〰
 !modlist
-Moderators list
-
+لیست مدیران گروه
+〰〰〰〰〰〰〰〰〰〰〰〰
 !promote [username]
-Promote someone
-
+مدیر کردن شخص با ایدی
+〰〰〰〰〰〰〰〰〰〰〰〰
 !demote [username]
-Demote someone
-
+حذف از مدیریتی گروه
+〰〰〰〰〰〰〰〰〰〰〰〰
 !kickme
-Will kick user
-
+کیک کردن خود
+〰〰〰〰〰〰〰〰〰〰〰〰
 !about
 Group description
-
+درباره گروه
+〰〰〰〰〰〰〰〰〰〰〰〰
 !setphoto
-Set and locks group photo
-
+تغییر عکس گروه
+〰〰〰〰〰〰〰〰〰〰〰〰
 !addplugin
-add plugin in bot
-
+اد کردن پلاگین مورد نظر
+〰〰〰〰〰〰〰〰〰〰〰〰
 !setname [name]
-Set group name
-
+تغییر اسم گروه
+〰〰〰〰〰〰〰〰〰〰〰〰
 !rules
-Group rules
-
+نمایش قوانین گروه
+〰〰〰〰〰〰〰〰〰〰〰〰
 !id
-return group id or user id
-
+گرفتن ایدی(عددی)* گروه
+〰〰〰〰〰〰〰〰〰〰〰〰
 !help
-
-!lock [member|name|bots|leave]	
+نمایش متن راهنما
+〰〰〰〰〰〰〰〰〰〰〰〰
+!lock [member|name|bots|leave] 
 Locks [member|name|bots|leaveing] 
-
+قفل (اد کردن-اسم-ربات-خارج شدن) گروه
+〰〰〰〰〰〰〰〰〰〰〰〰
 !unlock [member|name|bots|leave]
 Unlocks [member|name|bots|leaving]
-
+باز (اد کردن-اسم-ربات-خارج شدن) گروه
+〰〰〰〰〰〰〰〰〰〰〰〰
 !set rules <text>
-Set <text> as rules
-
+سیو کردن قوانین گروه
+〰〰〰〰〰〰〰〰〰〰〰〰
 !set about <text>
 Set <text> as about
-
+سیو کردن متن درباره گروه
+〰〰〰〰〰〰〰〰〰〰〰〰
 !settings
-Returns group settings
-
+نمایش تنظیمات گروه
+〰〰〰〰〰〰〰〰〰〰〰〰
 !newlink
-create/revoke your group link
-
+ساخت لینک جدید برای گروه
+〰〰〰〰〰〰〰〰〰〰〰〰
 !link
-returns group link
-
+دریافت لینک گروه
+〰〰〰〰〰〰〰〰〰〰〰〰
 !owner
-returns group owner id
-
+گرفتن ایدی(عددی)* مدیر اصلی گروه
+〰〰〰〰〰〰〰〰〰〰〰〰
 !setowner [id]
-Will set id as owner
-
+تغییر مدیر اصلی گروه🙃
+〰〰〰〰〰〰〰〰〰〰〰〰
 !setflood [value]
-Set [value] as flood sensitivity
-
+تعیین تعداد انتی اسپم گروه
+〰〰〰〰〰〰〰〰〰〰〰〰
 !stats
 Simple message statistics
-
+آمار گروه
+〰〰〰〰〰〰〰〰〰〰〰〰
 !save [value] <text>
 Save <text> as [value]
-
+ذخیره کردن یک متن به صورت عدد
+〰〰〰〰〰〰〰〰〰〰〰〰
 !get [value]
 Returns text of [value]
-
+گرفتن متنی که ذخیره شده به صورت عدد
+〰〰〰〰〰〰〰〰〰〰〰〰
 !clean [modlist|rules|about]
-Will clear [modlist|rules|about] and set it to nil
-
+ پاک کردن (قوانین گروه-مدیران گروه)
+〰〰〰〰〰〰〰〰〰〰〰〰
 !res [username]
-returns user id
+گرفتن یوزر نیم (عددی)شخص مورد نظر 
+مثل:
 "!res @username"
-
+〰〰〰〰〰〰〰〰〰〰〰〰
 !log
-will return group logs
-
+رویداد ها
+〰〰〰〰〰〰〰〰〰〰〰〰
 !banlist
-will return group ban list
-
+لیست اخراج شده های از گروه به صورت نامحدود
+〰〰〰〰〰〰〰〰〰〰〰〰
 !lockchat
-if someone send message bot kick it!
-
-!lockusername
-if someone join in your group bot kick it!
-
+قفل کردن چت در گروه 
+هرکس چت کنه کیک میشود
+〰〰〰〰〰〰〰〰〰〰〰〰
 !quran
-Play quran
-
+خواندن قرآن
+〰〰〰〰〰〰〰〰〰〰〰
 !calc
-calculator
-
+ماشین حساب
+〰〰〰〰〰〰〰〰〰〰〰〰
 !echo
-you can Say something with !echo on first it and bot Say it on your group
-
+حروف مورد نظر را روبات تکرار میکند
+〰〰〰〰〰〰〰〰〰〰〰〰
 !feedback
-you can send message with it to my admins
-
+ارسال نظر خود به ادمین
+〰〰〰〰〰〰〰〰〰〰〰〰
 !info
-about you in group
-
+در باره پروفایل و مقام خود در گروه
+〰〰〰〰〰〰〰〰〰〰〰〰
 !insudo
-invite my sudo in your group
-
+️اد کردن مدیر روبات جهت پرسش سوال
+〰〰〰〰〰〰〰〰〰〰〰〰
 !joke
-to Send a joke for you
-
+فرستادن جوک های خنده دار
+〰〰〰〰〰〰〰〰〰〰〰〰
 !linkpv
-to send a group link in your admins group(Only your admin)
-
+لینک گروه شما در پیوی ارسال میشود
+〰〰〰〰〰〰〰〰〰〰〰〰
 !lock bots
-if it is enabled bot kick robots(botfather)
-
-!lockenglish
-if it is enabled bot kick someone(if one of the someone speaks english and finglish)
-
-!location
-send your location in your group
-
+قفل کردن روبات هیچ روباتی در گروه نمیتواند بیاد
+〰〰〰〰〰〰〰〰〰〰〰〰
+!loc
+مکان
+〰〰〰〰〰〰〰〰〰〰〰〰
 !list
-or
-بفرس
-send music,plugin and... to your group
-
+لیست افراد گروه
+〰〰〰〰〰〰〰〰〰〰〰〰
 !translate
-you can translate a text with me
-
-!map
-send google map to your group
-
-!nas
-convert text to image
-
+ترجمه از گوگل
+〰〰〰〰〰〰〰〰〰〰〰〰
+!gps
+نشان دادن محل کنونی شما
+〰〰〰〰〰〰〰〰〰〰〰〰
+!txt2img
+تبدیل متن به  ایمیل
+〰〰〰〰〰〰〰〰〰〰〰〰
+!weather
+وضعیت آب و هوا
+➖➖➖➖➖➖➖➖➖➖➖➖
 **U can use both "/" and "!" 
-
-
+➖➖➖➖➖➖➖➖➖➖➖➖
 *Only owner and mods can add bots in group
-
-
+➖➖➖➖➖➖➖➖➖➖➖➖
 *Only moderators and owner can use kick,ban,unban,newlink,link,setphoto,setname,lock,unlock,set rules,set about and settings commands
-
+➖➖➖➖➖➖➖➖➖➖➖➖
 *Only owner can use res,setowner,promote,demote and log commands
 ]]
 }
