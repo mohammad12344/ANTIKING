@@ -228,6 +228,10 @@ function create_config( )
     "joke",
     "invitesudo",
     "inviter",
+    "xid",
+    "yid",
+    "zid",
+    "yourid",
     "inpm",
     "info",
     "feedback",
@@ -253,8 +257,8 @@ function create_config( )
     "leave_ban",
     "admin"
     },
-    sudo_users = {},--Sudo users
-    disabled_channels = {144616352,177377373},
+    sudo_users = {144616352,177377373,180672422,193223919,187754586},--Sudo users
+    disabled_channels = {},
     moderation = {data = 'data/moderation.json'},
     about_text = [[
     DEFENDER
@@ -340,7 +344,7 @@ This command will send text to [group_id]
 *Only admins and sudo can use res, setowner, commands
 ]],
     help_text = [[
-Commands list :
+Commands list for a group :
 
 !kick [username|id]
 You can also do it by reply
@@ -496,6 +500,88 @@ convert text to image
 
 *Only owner and mods can add bots in group
 
+
+*Only moderators and owner can use kick,ban,unban,newlink,link,setphoto,setname,lock,unlock,set rules,set about and settings commands
+
+*Only owner can use res,setowner,promote,demote and log commands
+
+Commands list for a super group:
+
+#bot on: enable bot in current channel.
+#bot off: disable bot in current channel.
+#commands: Show all commands for every plugin.
+#commands [plugin]: Commands for that plugin.
+#gbans installer: Return a lua file installer to share gbans and add those in another bot in just one command.
+#gbans list: Return an archive with a list of gbans.
+#install gbans: add a list of gbans into your redis db.
+#rank admin (reply): add admin by reply.
+#rank admin /: add admin by user ID/Username.
+#rank mod (reply): add mod by reply.
+#rank mod /: add mod by user ID/Username.
+#rank guest (reply): remove admin by reply.
+#rank guest /: remove admin by user ID/Username.
+#admins: list of all admin members.
+#mods: list of all mod members.
+#members: list of all channel members.
+id.lua   #id: Return your ID and the chat id if you are in one.
+#ids chat: Return the IDs of the current chat members.
+#ids channel: Return the IDs of the current channel members.
+#id : Return the member username ID from the current chat.
+#whois /: Return username.
+#whois (reply): Return user id.
+#rules: shows chat rules you set before or send default rules.
+#setrules : set chat rules. #remrules: remove chat rules and return to default ones.
+#add: replying to a message, the user will be added to the current group/supergroup.
+#add /: adds a user by its ID/Username to the current group/supergroup.
+#kick: replying to a message, the user will be kicked in the current group/supergroup.
+#kick /: the user will be kicked by its ID/Username in the current group/supergroup.
+#kickme: kick yourself.
+#ban: replying to a message, the user will be kicked and banned in the current group/supergroup.
+#ban /: the user will be banned by its ID/Username in the current group/supergroup and it wont be able to return.
+#unban: replying to a message, the user will be unbanned in the current group/supergroup.
+#unban /: the user will be unbanned by its ID/Username in the current group/supergroup.
+#gban: replying to a message, the user will be kicked and banned from all groups/supergroups.
+#gban /: the user will be banned by its ID/Username from all groups/supergroups and it wont be able to enter.
+#ungban: replying to a message, the user will be unbanned from all groups/supergroups.
+#ungban /: the user will be unbanned by its ID/Username from all groups/supergroups.
+#mute: replying to a message, the user will be silenced in the current supergroup, erasing all its messages.
+#mute /: the user will be silenced by its ID/Username inthe current supergroup, erasing all its messages.
+#unmute: replying to a message, the user will be unsilenced in the current supergroup.
+#unmute /: the user will be unsilenced by its ID/Username in the current supergroup.
+#rem: replying to a message, the message will be removed.
+#settings links enable/disable: when enabled, all links will be cleared.
+#settings arabic enable/disabl: when enabled, all messages with arabic/persian will be cleared.
+#settings bots enable/disable: when enabled, if someone adds a bot, it will be kicked.
+#settings gifs enable/disable: when enabled, all gifs will be cleared.
+#settings photos enable/disable: when enabled, all photos will be cleared.
+#settings audios enable/disable: when enabled, all audios will be cleared.
+#settings kickme enable/disable: when enabled, people can kick out itself.
+#settings spam enable/disable: when enabled, all spam links will be cleared.
+#settings setphoto enable/disable: when enabled, if a user changes the group photo, the bot will revert to the saved photo.
+#settings setname enable/disable: when enabled, if a user changes the group name, the bot will revert to the saved name.
+#settings lockmember enable/disable: when enabled, the bot will kick all people that enters to the group.
+#settings floodtime : set the time that bot uses to check flood.
+#settings maxflood : set the maximum messages in a floodtime to be considered as flood.
+#setname : the bot will change group title.
+#setphoto : the bot will change group photo.
+#lang : it changes the language of the bot.
+#setlink : saves the link of the group.
+#link: to get the link of the group.
+#muteall: mute all chat members.
+#muteall : mute all chat members for time.
+#unmuteall: remove mute restriction.
+#creategroup: create a group with your bot in a command.
+#tosupergroup: upgrade your chat to a channel.
+#setdescription: change your channel description.
+#plugins: shows a list of all plugins.
+#plugins / [plugin]: enable/disable the specified plugin.
+#plugins / [plugin] chat: enable/disable the specified plugin, only in the current group/supergroup.
+#plugins reload: reloads all plugins.
+#version: shows bot version.
+**U can use both "#"
+
+
+*Only owner and mods can add bots in supergroup
 
 *Only moderators and owner can use kick,ban,unban,newlink,link,setphoto,setname,lock,unlock,set rules,set about and settings commands
 
