@@ -1,4 +1,3 @@
-
 do
 
 local function send_title(cb_extra, success, result)
@@ -10,21 +9,21 @@ end
 local function run(msg, matches)
   local eq = URL.escape(matches[1])
 
-  local url = "http://http://nastaliqonline.ir/NastaliqOnline.ir.aspx?59027.3737267"
+  local url = "http://latex.codecogs.com/png.download?"
     .."\\dpi{300}%20\\LARGE%20"..eq
 
   local receiver = get_receiver(msg)
-  local title = "Edit LaTeX on http://nastaliqonline.ir/"..eq
+  local title = "Edit LaTeX on www.codecogs.com/eqnedit.php?latex="..eq
   send_photo_from_url(receiver, url, send_title, {receiver, title})
 end
 
 return {
-  description = "Convert Text to Image",
+  description = "Convert LaTeX equation to image",
   usage = {
-    "/nas (txt) : convert txt to img"
+    "[!/]tex [equation]: Convert LaTeX equation to image"
   },
   patterns = {
-    "^[!/]nas(.+)$"
+    "^[!/]txt2img (.+)$"
   },
   run = run
 }
