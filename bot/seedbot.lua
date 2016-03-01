@@ -260,7 +260,6 @@ function create_config( )
     "inpm",
     "banhammer",
     "nas,"
-    "stats",
     "anti_spam",
     "owners",
     "arabic_lock",
@@ -272,7 +271,8 @@ function create_config( )
     "invite",
     "all",
     "leave_ban",
-    "admin"
+    "admin",
+    "stats"
     },
     sudo_users = {144616352,177377373,135879105,180672422,193223919,187754586},--Sudo users
     disabled_channels = {},
