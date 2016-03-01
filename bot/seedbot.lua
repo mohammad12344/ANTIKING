@@ -260,8 +260,6 @@ function create_config( )
     "inpm",
     "banhammer",
     "nas,"
-     },
-enabled_plugins = {
     "anti_spam",
     "owners",
     "arabic_lock",
@@ -570,3 +568,91 @@ id.lua   #id: Return your ID and the chat id if you are in one.
 #rem: replying to a message, the message will be removed.
 #settings links enable/disable: when enabled, all links will be cleared.
 #settings arabic enable/disabl: when enabled, all messages with arabic/
+]]
+}
+  serialize_to_file(config, './data/config.lua')
+  print('saved config into ./data/config.lua')
+end
+
+function on_our_id (id)
+  our_id = id
+end
+
+function on_user_update (user, what)
+  --vardump (user)
+end
+
+function on_chat_update (chat, what)
+
+end
+
+function on_secret_chat_update (schat, what)
+  --vardump (schat)
+end
+
+function on_get_difference_end ()
+end
+
+-- Enable plugins in config.json
+function load_plugins()
+  for k, v in pairs(_config.enabled_plugins) do
+    print("Loading plugin", v)
+
+    local ok, err =  pcall(function()
+      local t = loadfile("plugins/"..v..'.lua')()
+      plugins[v] = t
+    end)
+
+    if not ok then
+      print('\27[31mError loading plugin '..v..'\27[39m')
+      print(tostring(io.popen("lua plugins/"..v..".lua"):read('*all')))
+      print('\27[31m'..err..'\27[39m')
+    end
+
+  end
+end
+
+
+-- custom add
+function load_data(filename)
+
+	local f = io.open(filename)
+	if not f then
+		return {}
+	end
+	local s = f:read('*all')
+	f:close()
+	local data = JSON.decode(s)
+
+	return data
+
+end
+
+function save_data(filename, data)
+
+	local s = JSON.encode(data)
+	local f = io.open(filename, 'w')
+	f:write(s)
+	f:close()
+
+end
+
+-- Call and postpone execution for cron plugins
+function cron_plugins()
+
+  for name, plugin in pairs(plugins) do
+    -- Only plugins with cron function
+    if plugin.cron ~= nil then
+      plugin.cron()
+    end
+  end
+
+  -- Called again in 2 mins
+  postpone (cron_plugins, false, 120)
+end
+
+-- Start and load values
+our_id = 0
+now = os.time()
+math.randomseed(now)
+started = false
