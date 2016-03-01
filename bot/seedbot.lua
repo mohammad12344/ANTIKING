@@ -259,7 +259,7 @@ function create_config( )
     "ingroup",
     "inpm",
     "banhammer",
-    "nas,"
+    "nas",
     "anti_spam",
     "owners",
     "arabic_lock",
