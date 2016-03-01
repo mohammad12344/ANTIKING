@@ -1,21 +1,19 @@
+do
+
 local function run(msg, matches)
-  local text = matches[1]
-  local b = 1
-  while b ~= 0 do
-    text = text:trim()
-    text,b = text:gsub('^!+','')
-    if not is_sudo then 
-return "برای صاحب بات"
+  if matches[1] == "send" then
+    local file = matches[2]
+    if is_sudo(msg) then
+      local receiver = get_receiver(msg)
+      send_document(receiver, "./plugins/"..file..".lua", ok_cb, false)
+    end
   end
-  local name = matches[2]
-  local file = io.open("./plugins/"..name..matches[3], "w")
-  file:write(text)
-  file:flush()
-  file:close()
-  return "done" end return {
-  description = "a Usefull plugin for sudo !",
-  usage = "A plugins to add Another plugins to the server",
+end
+
+return {
   patterns = {
-    "^addplugin +(.+) (.*) (.*)$"
+  "^(send) (.*)$"
   },
   run = run
+}
+end
