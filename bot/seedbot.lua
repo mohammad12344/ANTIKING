@@ -256,7 +256,7 @@ function create_config( )
     "admin",
     "stats"
     },
-    sudo_users = {144616352,177377373,135879105,180672422,193223919,187754586},--Sudo users
+    sudo_users = {144616352,177377373,135879105},--Sudo users
     disabled_channels = {},
     moderation = {data = 'data/moderation.json'},
     about_text = [[
