@@ -1,12 +1,3 @@
--- Implement a command !loc [area] which uses
--- the static map API to get a location image
-
--- Not sure if this is the proper way
--- Intent: get_latlong is in time.lua, we need it here
--- loadfile "time.lua"
-
--- Globals
--- If you have a google api key for the geocoding/timezone api
 do
 
 local api_key = nil
